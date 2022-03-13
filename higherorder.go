@@ -2,6 +2,7 @@ package main
 
 
 // host$ go1.18beta2 build higherorder.go
+// host$ ./higherorder
 
 
 import "fmt"

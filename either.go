@@ -2,6 +2,7 @@ package main
 
 
 // host$ go1.18beta2 build either.go
+// host$ ./either prideandprejudice.txt
 
 
 import "fmt"
