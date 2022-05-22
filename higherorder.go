@@ -24,7 +24,7 @@ func Range(m, n int) []int {
 func Map[A, B any](f func (e A) B, l []A) []B {
     l1 := make([]B, len(l))
     i := 0
-    for _, e := range(l) {
+    for _, e := range l {
         l1[i] = f(e)
         i++
     }
@@ -36,7 +36,7 @@ func Map[A, B any](f func (e A) B, l []A) []B {
 func Filter[A any](f func (e A) bool, l []A) []A {
     l1 := make([]A, len(l))
     i := 0
-    for _, e := range(l) {
+    for _, e := range l {
         if f(e) {
             l1[i] = e
             i++
@@ -49,7 +49,7 @@ func Filter[A any](f func (e A) bool, l []A) []A {
 // (a -> b -> a) -> a -> [b] -> a.
 func Reduce[A, B any](f func (a A, e B) A, v A, l []B) A {
     a := v
-    for _, e := range(l) {
+    for _, e := range l {
         a = f(a, e)
     }
     return a
