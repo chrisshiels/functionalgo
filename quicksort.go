@@ -38,7 +38,7 @@ func QuickSort[A Ordered](compare func (x, y A) int, l []A) []A {
     left := make([]A, 0, len(l) / 2)
     right := make([]A, 0, len(l) / 2)
 
-    for _, e := range(l[1:]) {
+    for _, e := range l[1:] {
         if compare(e, pivot) <= 0 {
             left = append(left, e)
         } else {
