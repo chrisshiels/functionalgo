@@ -99,7 +99,7 @@ func HashTableResize[K, V comparable](h *HashTable[K, V],
     h2 := HashTableNew[K, V](nslots, h.hash)
     for i, _ := range h.slots {
         for _, e := range h.slots[i] {
-            h2 = HashTableSet(h2, e.k, e.v)
+            h2 = hashtableset(h2, e.k, e.v)
         }
     }
     return h2
